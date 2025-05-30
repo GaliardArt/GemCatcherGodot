@@ -16,3 +16,5 @@ texture = ExtResource("1_p4bap")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_wuola")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

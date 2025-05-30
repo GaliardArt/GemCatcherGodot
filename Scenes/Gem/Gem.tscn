@@ -17,3 +17,5 @@ position = Vector2(0, 24)
 rotation = 0.785398
 scale = Vector2(1.78386, 1.78386)
 shape = SubResource("RectangleShape2D_7tt7y")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
