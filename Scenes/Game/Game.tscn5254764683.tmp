@@ -20,7 +20,7 @@ centered = false
 [node name="Paddle" parent="." instance=ExtResource("2_gwu2e")]
 position = Vector2(606, 571)
 
-[node name="SpawnTimer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
 
@@ -30,17 +30,6 @@ stream = ExtResource("5_y3kpf")
 [node name="Sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ln2h6")
 autoplay = true
-
-[node name="GamerOverLabel" type="Label" parent="."]
-offset_left = 341.0
-offset_top = 253.0
-offset_right = 840.0
-offset_bottom = 379.0
-theme_override_colors/font_color = Color(0.373339, 0.706873, 0.301621, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 39
-theme_override_font_sizes/font_size = 92
-text = "Game Over"
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_right = 46.0
@@ -52,4 +41,4 @@ theme_override_font_sizes/font_size = 66
 text = "000"
 
 [connection signal="area_entered" from="Paddle" to="." method="_on_paddle_area_entered"]
-[connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

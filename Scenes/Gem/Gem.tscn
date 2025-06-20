@@ -13,6 +13,7 @@ position = Vector2(0, 24)
 texture = ExtResource("1_pm03b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 24)
 rotation = 0.785398
 scale = Vector2(1.78386, 1.78386)

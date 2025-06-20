@@ -1,13 +1,24 @@
 extends Area2D
 
-class_name Paddle
+const SPEED: float = 460.0
 
-const SPEED: float = 300
+func _ready() -> void:
+	pass
 
 func _process(delta: float) -> void:
+	#if Input.is_action_pressed("move_left") == true:
+	#	position.x -= SPEED * delta
+	#if Input.is_action_pressed("move_right") == true:
+	#	position.x += SPEED * delta
+	
 	var movement: float = Input.get_axis("move_left", "move_right")
 	position.x += SPEED * delta * movement
-	position.x = clampf(position.x, 45, get_viewport_rect().end.x-45)
+		
+	position.x = clampf(
+		position.x,
+		Game.get_vpr().position.x,
+		Game.get_vpr().end.x
+	)
 
 func _on_area_entered(area: Area2D) -> void:
-	print("Paddle Collide With Gem")
+	print("_on_area_entered from Paddle Definiton")

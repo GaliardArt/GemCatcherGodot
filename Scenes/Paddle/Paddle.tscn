@@ -14,6 +14,7 @@ script = ExtResource("1_wuola")
 texture = ExtResource("1_p4bap")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_wuola")
 
